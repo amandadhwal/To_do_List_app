@@ -1,0 +1,37 @@
+{
+    "setupTasks": [
+      {
+        "name": "Install Dependencies",
+        "command": "npm install"
+      }
+    ],
+  
+    "tasks": {
+      "start": {
+        "name": "start",
+        "command": "npm run start",
+        "runAtStart": true
+      },
+      "build": {
+        "name": "build",
+        "command": "npm run build",
+        "runAtStart": false
+      },
+      "test": {
+        "name": "test",
+        "command": "npm run test",
+        "runAtStart": false
+      },
+      "eject": {
+        "name": "eject",
+        "command": "npm run eject",
+        "runAtStart": false
+      },
+      "npm start": {
+        "name": "npm start",
+        "command": "npm start",
+        "runAtStart": true
+      }
+    }
+  }
+  

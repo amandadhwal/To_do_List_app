@@ -1,10 +1,34 @@
-# Getting Started with Create React App
+# To Do List App React (V1)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To Do List App React JS by WebStylePress (Add, Edit, Update, Delete, Toggle Tasks)
 
-## Available Scripts
+## How to Use
 
-In the project directory, you can run:
+Clone or download repo
+NodeJS / NPM / Yarn should be installed in your PC
+
+Open terminal or Git for Windows (Git Bash)
+Run these commands:
+
+### Install Dependencies
+
+yarn install
+<!-- 
+if yarn not working or install properly run this command
+yarn add @fortawesome/fontawesome-svg-core
+npm i --save @fortawesome/free-solid-svg-icons
+yarn add @fortawesome/react-fontawesome@latest
+npm i --save @fortawesome/fontawesome-svg-core -->
+
+OR
+
+npm install
+
+### Run app
+
+yarn start
+
+OR
 
 ### `npm start`
 
@@ -14,57 +38,49 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Project Structure
+    The project structure is organized as follows:
 
-### `npm run build`
+    java
+    Copy code
+    todo-app/
+    ├── public/
+    │   ├── index.html
+    ├── src/
+    │   ├── components/
+    │   │   ├── TaskInput.jsx
+    │   │   ├── TaskList.jsx
+    │   ├── redux/
+    │   │   ├── actions.js
+    │   │   ├── reducers.js
+    │   │   ├── store.js
+    │   ├── App.js
+    │   ├── index.js
+    ├── package.json
+    ├── README.md
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Components
+    TaskInput: A component for adding a new task.
+    TaskList: A component for displaying the list of tasks.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Redux
+    actions.js: Contains the action creators for adding, editing, and deleting tasks.
+    reducers.js: Contains the reducer that handles the task-related actions.
+    store.js: Configures and exports the Redux store.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Application Logic
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Adding a Task
+    The user inputs a task in the TaskInput component.
+    The task is added to the Redux store by dispatching an action.
+    The TaskList component listens to the store and updates the displayed list of tasks.
+## Deleting a Task
+    The user clicks the delete button on a task in the TaskList component.
+    The task is removed from the Redux store by dispatching an action.
+    The TaskList component listens to the store and updates the displayed list of tasks.
+## Editing a Task
+    The user clicks the edit button on a task in the TaskList component.
+    A popup is shown allowing the user to edit the task.
+    The edited task is updated in the Redux store by dispatching an action.
+    The TaskList component listens to the store and updates the displayed list of tasks.
